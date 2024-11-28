@@ -7,7 +7,7 @@ DB_URL = settings.get_sqlalchemy_dsn()
 
 engine = create_async_engine(DB_URL)
 
-session = sessionmaker(bind=engine, class_=AsyncSession , expire_on_commit=False)
+async_session = sessionmaker(bind=engine, class_=AsyncSession , expire_on_commit=False)
 
 
 class Base(DeclarativeBase):
