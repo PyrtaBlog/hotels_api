@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, LargeBinary, String
 from app.database import Base
 
 class Users(Base):
@@ -6,4 +6,4 @@ class Users(Base):
     
     id = Column(Integer, primary_key=True, autoincrement=True)
     email = Column(String, nullable=False)
-    hashed_password = Column(String, nullable=False)
+    hashed_password = Column(LargeBinary, nullable=False)
